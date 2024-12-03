@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FitBod</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Mohidn Fitness</h1>
+    <nav>
+        <button class="hamburger" id="hamburger-btn">
+          &#9776; <!-- Hamburger icon -->
+        </button>
+        <div id="side-nav" class="side-nav">
+          <a href="#muscle-map" class="nav-link">Muscle Groups</a>
+          <a href="#workout-splits" class="nav-link">Workout Splits</a>
+          <a href="#nutrition" class="nav-link">Nutrition</a>
+          <a href="#calculators" class="nav-link">Calculators</a>
+        </div>
+      </nav>
+  </header>
+
+  <main>
+    <!-- Muscle Groups Section -->
+    <section id="muscle-map">
+        <h2>Muscle Groups</h2>
+        <p>Click on a muscle group to see its workouts.</p>
+        <div id="muscle-list">
+            <button class="muscle-group" onclick="showWorkout('Chest')">Chest</button>
+            <button class="muscle-group" onclick="showWorkout('Back')">Back</button>
+            <button class="muscle-group" onclick="showWorkout('Biceps')">Biceps</button>
+            <button class="muscle-group" onclick="showWorkout('Triceps')">Triceps</button>
+            <button class="muscle-group" onclick="showWorkout('Shoulders')">Shoulders</button>
+            <button class="muscle-group" onclick="showWorkout('Legs')">Legs</button>
+            <button class="muscle-group" onclick="showWorkout('Abs')">Abs</button>
+            <button class="muscle-group" onclick="showWorkout('Calves')">Calves</button>
+          </div>
+        <div id="workout-modal"></div>
+      </section>
+      
+
+    <!-- Workout Splits Section -->
+    <section id="workout-splits">
+      <h2>Workout Splits</h2>
+      <p>Select your preferred schedule:</p>
+      <select id="workout-split" onchange="showWorkoutSplit()">
+        <option value="3">3-Day Split</option>
+        <option value="4">4-Day Split</option>
+        <option value="5">5-Day Split</option>
+        <option value="6">6-Day Split</option>
+      </select>
+      <pre id="workout-schedule"></pre>
+    </section>
+
+    <!-- Nutrition Section -->
+    <section id="nutrition">
+      <h2>Nutrition</h2>
+      <button onclick="showNutrition('fat-loss')">Fat Loss Diet</button>
+      <button onclick="showNutrition('muscle-gain')">Muscle Gain Diet</button>
+      <div id="nutrition-info"></div>
+    </section>
+
+    <!-- Calculators Section -->
+    <section id="calculators">
+      <h2>Calculators</h2>
+      <div>
+        <h3>BMR Calculator</h3>
+        <form id="bmr-form">
+          <input type="number" id="bmr-weight" placeholder="Weight (kg)" required />
+          <input type="number" id="bmr-height" placeholder="Height (cm)" required />
+          <input type="number" id="bmr-age" placeholder="Age (years)" required />
+          <select id="bmr-activity">
+            <option value="1.2">Sedentary</option>
+            <option value="1.375">Lightly Active</option>
+            <option value="1.55">Moderately Active</option>
+            <option value="1.725">Very Active</option>
+          </select>
+          <button type="button" onclick="calculateBMR()">Calculate BMR</button>
+        </form>
+        <p id="bmr-result"></p>
+      </div>
+      <div>
+        <h3>BMI Calculator</h3>
+        <form id="bmi-form">
+          <input type="number" id="bmi-weight" placeholder="Weight (kg)" required />
+          <input type="number" id="bmi-height" placeholder="Height (m)" required />
+          <button type="button" onclick="calculateBMI()">Calculate BMI</button>
+        </form>
+        <p id="bmi-result"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Fitness & Bodybuilding. All rights reserved.</p>
+  </footer>
+</body>
+</html>

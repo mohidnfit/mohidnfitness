@@ -1,0 +1,314 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #1d3557, #457b9d);
+    color: #f1faee;
+  }
+  
+  header {
+    background-color: #1d3557;
+    padding: 10px 20px;
+    text-align: center;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  nav a {
+    margin: 0 15px;
+    color: #f1faee;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  .muscle-group:hover {
+    fill: #e63946;
+    cursor: pointer;
+  }
+  
+  #workout-modal {
+    display: none;
+    background: #a8dadc;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 10px;
+    background: #1d3557;
+  }
+  
+  /* Mobile Styling */
+  @media (max-width: 768px) {
+    header h1 {
+      font-size: 1.5rem;
+    }
+  
+    nav {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    nav a {
+      margin: 10px 0;
+      font-size: 1.2rem;
+    }
+  
+    main {
+      padding: 10px;
+    }
+  
+    #svg-container svg {
+      width: 100%;
+      height: auto;
+    }
+  
+    #workout-modal {
+      font-size: 0.9rem;
+    }
+  
+    #workout-splits,
+    #nutrition,
+    #calculators {
+      margin-top: 20px;
+    }
+  
+    select,
+    input,
+    button {
+      font-size: 1rem;
+      width: 100%;
+      margin: 10px 0;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+  
+    pre {
+      font-size: 0.9rem;
+      white-space: pre-wrap; /* Wrap text for smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    header h1 {
+      font-size: 1.2rem;
+    }
+  
+    nav a {
+      font-size: 1rem;
+    }
+  
+    main {
+      padding: 5px;
+    }
+  
+    button {
+      padding: 8px;
+    }
+  
+    #workout-modal {
+      font-size: 0.8rem;
+      padding: 15px;
+    }
+  
+    #bmr-result,
+    #bmi-result {
+      font-size: 0.9rem;
+    }
+  }
+  /* Muscle List */
+#muscle-list {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .muscle-group {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .muscle-group:hover {
+    background-color: #45a049;
+  }
+  
+  /* Workout Modal */
+  #workout-modal {
+    display: none;
+    background-color: white;
+    color: black;
+    padding: 20px;
+    margin: 20px auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 400px;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  /* Default desktop styles */
+#muscle-map {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  #muscle-map h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+  
+  #muscle-map p {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  #muscle-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .muscle-group {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .muscle-group:hover {
+    background-color: #45a049;
+  }
+  
+  #workout-modal {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    display: none; /* Initially hidden */
+  }
+  
+  /* Mobile Styles */
+  @media (max-width: 768px) {
+    #muscle-map h2 {
+      font-size: 1.5em;
+    }
+  
+    #muscle-map p {
+      font-size: 1em;
+      margin-bottom: 15px;
+    }
+  
+    #muscle-list {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .muscle-group {
+      width: 80%;
+      font-size: 1em;
+      margin: 5px 0;
+      padding: 12px;
+    }
+  
+    .muscle-group:hover {
+      background-color: #45a049;
+    }
+  
+    #workout-modal {
+      padding: 15px;
+      font-size: 1em;
+    }
+  }
+  
+  /* Very Small Mobile Devices */
+  @media (max-width: 480px) {
+    .muscle-group {
+      font-size: 0.9em;
+      padding: 10px;
+    }
+    
+    #muscle-map h2 {
+      font-size: 1.3em;
+    }
+  
+    #muscle-map p {
+      font-size: 0.9em;
+    }
+  }
+  /* Default styles (for desktop and larger screens) */
+nav {
+  display: flex;
+  /* justify-content: flex-start; */
+  align-items: center;
+  /* background-color: #333; */
+  padding: 10px;
+}
+
+nav a {
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 1.1em;
+}
+
+nav a:hover {
+  background-color: #555;
+}
+
+/* Hamburger button styles */
+.hamburger {
+  display: none; /* Hide the hamburger button by default */
+  background: none;
+  border: none;
+  font-size: 2em;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+}
+
+/* For mobile and tablet screens */
+@media (max-width: 768px) {
+  /* Hide the navigation links by default on small screens */
+  nav a {
+    display: none;
+  }
+
+  /* Show the hamburger button */
+  .hamburger {
+    display: block;
+  }
+
+  /* Style for the active navigation (when clicked) */
+  nav.open a {
+    display: block; /* Show the links when 'open' class is added */
+    text-align: center;
+    padding: 12px;
+    font-size: 1.2em;
+    border-top: 1px solid #ccc;
+    background-color: #444;
+  }
+}
